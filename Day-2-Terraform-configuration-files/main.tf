@@ -2,6 +2,9 @@ resource "aws_instance" "name" {
     ami = var.ami_id
     instance_type = var.type
     subnet_id = aws_subnet.name.id
+    tags = {
+      Name = "myserver"
+    }
     
 }
 resource "aws_vpc" "name" {
