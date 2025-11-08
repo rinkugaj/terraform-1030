@@ -9,10 +9,8 @@ resource "aws_instance" "name" {
      instance_type = "t2.micro"
   
 }
-resource "aws_s3_bucket" "name" {
-  bucket = "remotefilebucket385978937837589235"
-  
-}
+
+
 resource "aws_subnet" "name" {
   vpc_id = aws_vpc.name.id
   cidr_block = "10.0.0.0/24"
